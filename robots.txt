@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://krishnajewmankon.github.io/portalhome-hth-com-cn/sitemap.xml
