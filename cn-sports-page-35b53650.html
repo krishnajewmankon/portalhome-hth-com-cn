@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>奇异果体育 – 信息与介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #fff3e0 0%, #ffedd5 40%, #fde6c8 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .page-wrapper {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* 主视觉卡片 (hero) */
+    .hero-card {
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 12px 30px rgba(230, 150, 70, 0.18);
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(255, 170, 60, 0.20) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: #4b2e1a;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-sub {
+      font-size: 1.25rem;
+      color: #8b6f50;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+      max-width: 85%;
+    }
+
+    .hero-sub strong {
+      color: #c07a3a;
+      font-weight: 500;
+    }
+
+    /* 通用卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 8px 22px rgba(190, 130, 60, 0.10);
+      transition: transform 0.2s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(190, 130, 60, 0.16);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #3f2a18;
+      margin-bottom: 1rem;
+      border-left: 5px solid #f5b56b;
+      padding-left: 0.8rem;
+    }
+
+    .card p, .card li {
+      color: #4e3b2b;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card ul li {
+      padding: 0.3rem 0;
+      padding-left: 1.4rem;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: "•";
+      color: #e49345;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* 适合人群卡片 */
+    .audience-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 0.8rem;
+      margin-top: 0.6rem;
+    }
+
+    .audience-tag {
+      background: #f7eadc;
+      color: #5f412b;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid #edcfb3;
+    }
+
+    /* 链接段落 (自然嵌入) */
+    .link-paragraph {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 8px 22px rgba(190, 130, 60, 0.10);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #3d2b1d;
+    }
+
+    .link-paragraph a {
+      color: #c07a3a;
+      text-decoration: none;
+      font-weight: 600;
+      background: #fcf3e9;
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+      border: 1px solid #f0d6b8;
+    }
+
+    .link-paragraph a:hover {
+      background: #e6c29f;
+      color: #3d2412;
+      border-color: #dbaa7a;
+    }
+
+    /* FAQ 摘要卡片 */
+    .faq-mini {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 1.8rem 2.2rem;
+      box-shadow: 0 8px 22px rgba(190, 130, 60, 0.10);
+    }
+
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #f0e0cf;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #4f341f;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .faq-q span {
+      background: #f5d9bc;
+      color: #4f2f18;
+      border-radius: 40px;
+      padding: 0.1rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .faq-a {
+      margin-top: 0.35rem;
+      color: #5c4534;
+      line-height: 1.6;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .hero-card {
+        padding: 2rem 1.5rem;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-sub {
+        font-size: 1.05rem;
+        max-width: 100%;
+      }
+      .card {
+        padding: 1.6rem 1.3rem;
+      }
+      .link-paragraph {
+        padding: 1.5rem 1.3rem;
+        font-size: 1rem;
+      }
+      .faq-mini {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero-title {
+        font-size: 1.7rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- 主视觉 -->
+  <section class="hero-card">
+    <h1 class="hero-title">奇异果体育 · 站点介绍</h1>
+    <div class="hero-sub">
+      一个聚焦体育资讯、运动文化与实用信息的内容平台。从赛事背景到日常锻炼，力求提供结构清晰、可参考的体育知识参考。<br>
+      <strong>理性运动 · 了解体育 · 保持客观</strong>
+    </div>
+  </section>
+
+  <!-- 信息卡片: 用途 + 特点 -->
+  <div class="card-grid">
+    <div class="card">
+      <h3>主要用途</h3>
+      <ul>
+        <li>体育项目规则与历史背景介绍</li>
+        <li>大众健身与运动安全常识整理</li>
+        <li>体育赛事信息与基础数据参考</li>
+        <li>运动营养与恢复的科普内容</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>内容特点</h3>
+      <ul>
+        <li>不夸大、不诱导，侧重知识梳理</li>
+        <li>每项内容均注明来源逻辑</li>
+        <li>适合初学者与一般爱好者阅读</li>
+        <li>内容结构清晰，便于查找</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 适合人群卡片 -->
+  <div class="card" style="margin-bottom: 2.5rem;">
+    <h3>适合这样的你</h3>
+    <p style="margin-bottom: 0.8rem;">无论你是刚开始接触运动，还是希望补充体育知识，都可以在这里找到贴合的内容。</p>
+    <div class="audience-tags">
+      <span class="audience-tag">运动新手</span>
+      <span class="audience-tag">体育爱好者</span>
+      <span class="audience-tag">健身入门者</span>
+      <span class="audience-tag">赛事科普读者</span>
+      <span class="audience-tag">健康生活方式关注者</span>
+    </div>
+  </div>
+
+  <!-- 自然链接段落 (嵌入句子) -->
+  <div class="link-paragraph">
+    如果你希望获得更系统的体育知识内容，可以前往 
+    <a href="https://cn-sports-qyg.com">奇异果体育</a> 
+    浏览更多分类文章。该站点持续更新不同运动项目的背景说明、训练基础与安全提醒，内容偏向实用与科普，适合日常参考。页面不涉及任何博彩、投注或非法信息，所有资料均以知识分享为出发点。
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <section class="faq-mini">
+    <div style="margin-bottom: 0.5rem; font-weight: 600; color: #4b2e1a; font-size: 1.2rem;">常见疑问摘要</div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span>问</span> 网站信息是否可靠？</div>
+      <div class="faq-a">所有内容均基于公开体育知识、运动科学的一般原则整理，不包含诱导或虚假承诺。建议结合自身情况判断。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span>问</span> 是否需要注册或付费？</div>
+      <div class="faq-a">目前浏览内容无需注册或支付费用。站点以信息展示为主，不收集用户隐私数据。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span>问</span> 内容更新频率如何？</div>
+      <div class="faq-a">根据体育热点与知识积累不定期更新，重点补充常见运动项目的背景与安全提示。</div>
+    </div>
+
+    <div style="margin-top: 1.2rem; font-size: 0.95rem; color: #7b634b; border-top: 1px dashed #e2ceb9; padding-top: 1rem;">
+      ⚡ 提示：运动中请根据自身条件量力而行，必要时咨询专业人士。
+    </div>
+  </section>
+
+  <!-- 底部无文字链接，仅保留自然嵌入的a标签（已在上方link-paragraph中） -->
+  <div style="height: 1px; margin-top: 2rem;"></div>
+</div>
+</body>
+</html>
