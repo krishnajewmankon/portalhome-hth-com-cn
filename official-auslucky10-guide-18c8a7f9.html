@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳洲幸运10 · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1e2f;
+            background: #f6f7fb;
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: linear-gradient(145deg, #0b0e1a 0%, #1a1f33 100%);
+            color: #eef0f8;
+            padding: 4rem 1.5rem 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: #f6f7fb;
+            clip-path: ellipse(60% 100% at 50% 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            opacity: 0.75;
+            font-weight: 300;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding-top: 0.6rem;
+            margin-top: 0.2rem;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 1.8rem 3rem;
+        }
+
+        .card-intro {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.4rem 2rem;
+            margin-top: -1.8rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-intro p:first-of-type::first-letter {
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: #2b3a67;
+            float: left;
+            line-height: 0.9;
+            margin-right: 8px;
+        }
+
+        .card-intro p {
+            margin-bottom: 1.4rem;
+        }
+
+        .highlight-link {
+            color: #1f5e8e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .highlight-link:hover {
+            border-bottom-color: #1f5e8e;
+            color: #0b385a;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.6rem;
+            margin: 2.4rem 0 2rem;
+        }
+
+        .feature-item {
+            background: #f0f2f9;
+            border-radius: 20px;
+            padding: 1.6rem 1.2rem;
+            transition: transform 0.2s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .feature-item .icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: #1e2a44;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #3c4a5e;
+        }
+
+        .scene-note {
+            background: #e9edf5;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .scene-note h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+            color: #18233a;
+        }
+
+        .scene-note p {
+            margin-bottom: 0.6rem;
+        }
+
+        .faq-mini {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            margin: 2rem 0 1.6rem;
+        }
+
+        .faq-mini h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-left: 4px solid #2b3a67;
+            padding-left: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #e2e6ef;
+            padding-bottom: 0.4rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #1f2b45;
+            padding: 0.2rem 0;
+        }
+
+        .faq-mini summary::marker {
+            color: #2b3a67;
+        }
+
+        .faq-mini details p {
+            margin: 0.4rem 0 0.8rem 0.6rem;
+            color: #3d4b63;
+            font-size: 0.95rem;
+        }
+
+        .outro {
+            text-align: center;
+            margin: 2.8rem 0 1.2rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid #d6dceb;
+            font-size: 0.95rem;
+            color: #4b5a70;
+        }
+
+        .outro a {
+            color: #1f5e8e;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .outro a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .card-intro {
+                padding: 1.6rem 1.2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 1rem 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>澳洲幸运10</h1>
+        <span class="sub">一份简明指南 · 保持清醒的观察</span>
+    </header>
+
+    <div class="container">
+        <div class="card-intro">
+            <p>
+                如果想快速了解一个数字游戏的基本轮廓，不妨从它的规则和节奏开始。这里讨论的，正是以十个位置、每期开奖为结构的 <a href="https://official-auslucky10.com" class="highlight-link">澳洲幸运10</a>。它并非复杂的系统，更像是一场由随机性主导的观察练习。很多人初次接触时，会被它频繁的开奖频率吸引，但真正值得留意的，是背后冷静的概率分配与个人参与的逻辑。
+            </p>
+            <p>
+                整个过程并不神秘：从一到十的编号，每一次结果独立产生，没有任何模式可以锁定未来。把这看作一种数字现象，或许比匆忙下结论更有意思。下文将梳理它的几个常见特征、适用场景，以及一些务实的访问建议。
+            </p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="icon">📐</div>
+                <h3>结构简洁</h3>
+                <p>十个号码，位置分明。每期开奖结果彼此独立，不依赖历史数据。</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon">⏱️</div>
+                <h3>节奏固定</h3>
+                <p>开奖周期较短，便于观察短期内的分布变化，但不宜过度解读。</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon">📊</div>
+                <h3>边界清晰</h3>
+                <p>所有可能组合均可穷举，不存在隐藏变量——这是理性分析的前提。</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon">🧠</div>
+                <h3>心态优先</h3>
+                <p>任何数字游戏都应建立在可承受范围内，了解规则比追求结果更重要。</p>
+            </div>
+        </div>
+
+        <div class="scene-note">
+            <h2>🧭 适合怎样的场景？</h2>
+            <p>
+                如果你对数字排列感兴趣，或者想体验一种低门槛的随机现象观察方式，<a href="https://official-auslucky10.com" class="highlight-link">澳洲幸运10</a> 可以是一个参考样本。许多人把它当作一种休闲时的数据记录练习，而不是投机渠道。
+            </p>
+            <p>
+                另外，对于希望理解「独立事件」概念的朋友来说，反复观看开奖过程，反而容易形成认知偏差。建议每次只关注当前一期，不必追溯所谓的“冷热号”，那只是人类大脑擅长的叙事幻觉。
+            </p>
+        </div>
+
+        <div class="faq-mini">
+            <h2>❓ 常见疑问摘要</h2>
+            <details>
+                <summary>这个游戏需要复杂分析吗？</summary>
+                <p>不需要。它的核心就是十个号码的随机排列，任何复杂策略都无法改变单次概率。简单了解规则即可，不必钻研技巧。</p>
+            </details>
+            <details>
+                <summary>如何避免被误导信息影响？</summary>
+                <p>只相信官方渠道公布的结果，不轻信任何“必中”“规律”类宣传。保持怀疑，用统计常识过滤信息。</p>
+            </details>
+            <details>
+                <summary>我该以什么心态参与？</summary>
+                <p>把它视作一项数字观察活动，而非收入来源。设定自己的参与界限，不追、不赌、不幻想。</p>
+            </details>
+        </div>
+
+        <div class="outro">
+            <p>理解规则、保持距离、不夸大随机。若想进一步查阅细节，可访问 <a href="https://official-auslucky10.com">澳洲幸运10</a> 做更全面的了解。</p>
+            <p style="margin-top:0.6rem; opacity:0.6; font-size:0.85rem;">— 仅作信息介绍，不构成任何操作建议 —</p>
+        </div>
+    </div>
+</body>
+</html>
